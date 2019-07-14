@@ -34,7 +34,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("Movie Detail");
+            actionBar.setTitle(getResources().getString(R.string.movie_detail));
         }
 
 

@@ -7,6 +7,8 @@ import com.google.fdp.moviecatalogue.model.Movie;
 import com.google.fdp.moviecatalogue.view.MoviesView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Created by gama on 2019-07-01.
@@ -23,7 +25,7 @@ public class MoviesPresenter {
         this.view = view;
     }
 
-    public void buildMoviesData() {
+    public void buildMoviesData(boolean orderer) {
         String[] titles = context.getResources().getStringArray(R.array.movies_title);
         String[] images = context.getResources().getStringArray(R.array.movies_image);
         String[] releaseDates = context.getResources().getStringArray(R.array.movies_date);
@@ -38,6 +40,10 @@ public class MoviesPresenter {
             movies.add(movie);
         }
 
+
+        if (orderer) {
+            Collections.sort(movies, Comparator.comparing(Movie::getTitle));
+        }
 
         this.view.showMovies(movies);
 

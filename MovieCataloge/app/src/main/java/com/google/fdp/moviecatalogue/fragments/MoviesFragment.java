@@ -44,9 +44,7 @@ public class MoviesFragment extends Fragment implements MoviesView, MovieAdapter
         adapter = new MovieAdapter(getActivity());
         adapter.setOnItemClickCallback(this);
         MoviesPresenter presenter = new MoviesPresenter(getActivity(), this);
-        presenter.buildMoviesData();
-
-
+        presenter.buildMoviesData(false);
 
 
         return view;
@@ -55,6 +53,7 @@ public class MoviesFragment extends Fragment implements MoviesView, MovieAdapter
     @Override
     public void showMovies(ArrayList<Movie> movies) {
         rvMovies.setLayoutManager(new LinearLayoutManager(getActivity()));
+        // re-order the tv series to make it different with Movie
         adapter.setMovies(movies);
         adapter.notifyDataSetChanged();
         rvMovies.setAdapter(adapter);
