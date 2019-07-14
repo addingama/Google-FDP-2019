@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.google.fdp.moviecatalogue.R;
 import com.google.fdp.moviecatalogue.model.Movie;
-import com.google.fdp.moviecatalogue.view.MainView;
+import com.google.fdp.moviecatalogue.view.MoviesView;
 
 import java.util.ArrayList;
 
@@ -13,21 +13,21 @@ import java.util.ArrayList;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-public class MainPresenter {
-    private MainView view;
+public class MoviesPresenter {
+    private MoviesView view;
     private Context context;
     private ArrayList<Movie> movies = new ArrayList<Movie>();
 
-    public  MainPresenter(Context context, MainView view) {
+    public MoviesPresenter(Context context, MoviesView view) {
         this.context = context;
         this.view = view;
     }
 
     public void buildMoviesData() {
-        String titles[] = context.getResources().getStringArray(R.array.movies_title);
-        String images[] = context.getResources().getStringArray(R.array.movies_image);
-        String releaseDates[] = context.getResources().getStringArray(R.array.movies_date);
-        String descriptions[] = context.getResources().getStringArray(R.array.movies_description);
+        String[] titles = context.getResources().getStringArray(R.array.movies_title);
+        String[] images = context.getResources().getStringArray(R.array.movies_image);
+        String[] releaseDates = context.getResources().getStringArray(R.array.movies_date);
+        String[] descriptions = context.getResources().getStringArray(R.array.movies_description);
 
         for (int i = 0; i < titles.length; i++) {
             Movie movie = new Movie();

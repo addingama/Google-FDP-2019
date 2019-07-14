@@ -9,6 +9,6 @@ import java.util.ArrayList;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-public interface MainView {
+public interface MoviesView {
     void showMovies(ArrayList<Movie> movies);
 }
