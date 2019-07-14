@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_date">June 2, 2019</string>
+    <string name="movie_description">The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when shes hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Greys new abilities to rule the galaxy.</string>
+
+    <string-array name="movies_title">
+        <item>Toy Story 4</item>
+        <item>Spider-Man: Far from Home</item>
+        <item>Shazam!</item>
+        <item>Alita: Battle Angel</item>
+        <item>Pet Sematary</item>
+        <item>Annabelle Comes Home</item>
+        <item>Detective Conan: The Fist of Blue Sapphire</item>
+        <item>John Wick: Chapter 3 - Parabellum</item>
+        <item>Aladdin</item>
+        <item>Captain Marvel</item>
+        <item>Dark Phoenix</item>
+
+    </string-array>
+    <string-array name="movies_image">
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg</item>
+        <item>https://image.tmdb.org/t/p/w600_and_h900_bestv2/2cAc4qH9Uh2NtSujJ90fIAMrw7T.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/xnopI5Xtky18MPhK40cZAGAOVeV.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/xRWht48C2V8XNfzvPehyClOvDni.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/7SPhr7Qj39vbnfF9O2qHRYaKHAL.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/jsbt03UnPPt14AYRMcGaoqtwNxQ.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/1GyvpwvgswOrHvxjnw2FBLNkTyo.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg</item>
+        <item>https://image.tmdb.org/t/p/w370_and_h556_bestv2/kZv92eTc0Gg3mKxqjjDAM73z9cy.jpg</item>
+    </string-array>
+    <string-array name="movies_date">
+        <item>June 21, 2019</item>
+        <item>July 2, 2019</item>
+        <item>March 23, 2019</item>
+        <item>February 14, 2019</item>
+        <item>April 5, 2019</item>
+        <item>June 26, 2019</item>
+        <item>April 12, 2019</item>
+        <item>May 17, 2019</item>
+        <item>May 24, 2019</item>
+        <item>March 8, 2019</item>
+        <item>June 7, 2016</item>
+    </string-array>
+    <string-array name="movies_description">
+        <item>Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that\'s Andy or Bonnie. But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy.</item>
+        <item>Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.</item>
+        <item>A boy is given the ability to become an adult superhero in times of need with a single magic word.</item>
+        <item>When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.</item>
+        <item>Dr. Louis Creed and his wife, Rachel, relocate from Boston to rural Maine with their two young children. The couple soon discover a mysterious burial ground hidden deep in the woods near their new home.</item>
+        <item>Determined to keep Annabelle from wreaking more havoc, demonologists Ed and Lorraine Warren bring the possessed doll to the locked artifacts room in their home, placing her \“safely\” behind sacred glass and enlisting a priest\’s holy blessing. But an unholy night of horror awaits as Annabelle awakens the evil spirits in the room, who all set their sights on a new target—the Warrens\' ten-year-old daughter, Judy, and her friends.</item>
+        <item>23rd movie in the "Detective Conan" franchise.</item>
+        <item>Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.</item>
+        <item>A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.</item>
+        <item>The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.</item>
+        <item>The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she\'s hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey\'s new abilities to rule the galaxy.</item>
+    </string-array>
+
+</resources>
