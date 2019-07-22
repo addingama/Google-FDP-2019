@@ -9,12 +9,13 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.fdp.moviecatalogue.R;
-import com.google.fdp.moviecatalogue.model.Movie;
+import com.google.fdp.moviecatalogue.model.TvSerie;
 
-public class MovieDetailActivity extends AppCompatActivity {
-    public static final String EXTRA_MOVIE = "extra_movie";
+public class TvSerieDetailActivity extends AppCompatActivity {
 
-    private Movie movie;
+    public static final String EXTRA_MOVIE = "extra_tv_serie";
+
+    private TvSerie movie;
     private TextView txtTitle;
     private TextView txtDate;
     private TextView txtDescription;
@@ -23,7 +24,7 @@ public class MovieDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movie_detail);
+        setContentView(R.layout.activity_tv_serie_detail);
 
 
         imgPoster = findViewById(R.id.img_poster);
@@ -43,8 +44,8 @@ public class MovieDetailActivity extends AppCompatActivity {
     }
 
     private void displayMovie() {
-        txtTitle.setText(movie.getTitle());
-        txtDate.setText(movie.getReleaseDate());
+        txtTitle.setText(movie.getName());
+        txtDate.setText(movie.getFirstAirDate());
         txtDescription.setText(movie.getOverview());
 
         Glide.with(this).load(movie.getPosterPath()).into(imgPoster);

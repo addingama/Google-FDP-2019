@@ -1,8 +1,8 @@
 package com.google.fdp.moviecatalogue.presenter;
 
-import com.google.fdp.moviecatalogue.model.Movie;
-import com.google.fdp.moviecatalogue.model.responses.MoviesResponse;
-import com.google.fdp.moviecatalogue.view.MoviesView;
+import com.google.fdp.moviecatalogue.model.TvSerie;
+import com.google.fdp.moviecatalogue.model.responses.TvSeriesResponse;
+import com.google.fdp.moviecatalogue.view.TvSeriesView;
 
 import java.util.ArrayList;
 
@@ -15,20 +15,20 @@ import retrofit2.Response;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-public class MoviesPresenter extends BasePresenter{
-    private MoviesView view;
-    private ArrayList<Movie> movies = new ArrayList<Movie>();
+public class TvSeriesPresenter extends BasePresenter{
+    private TvSeriesView view;
+    private ArrayList<TvSerie> movies = new ArrayList<TvSerie>();
 
-    public MoviesPresenter(MoviesView view) {
+    public TvSeriesPresenter(TvSeriesView view) {
         this.view = view;
     }
 
 
-    public void fetchMovies() {
+    public void fetchTvSeries() {
         view.showLoading(true);
-        this.service.getMovies().enqueue(new Callback<MoviesResponse>() {
+        this.service.getTvSeries().enqueue(new Callback<TvSeriesResponse>() {
             @Override
-            public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
+            public void onResponse(Call<TvSeriesResponse> call, Response<TvSeriesResponse> response) {
                 view.showLoading(false);
                 if (response.body() != null) {
                     movies = response.body().results;
@@ -39,14 +39,14 @@ public class MoviesPresenter extends BasePresenter{
             }
 
             @Override
-            public void onFailure(Call<MoviesResponse> call, Throwable t) {
+            public void onFailure(Call<TvSeriesResponse> call, Throwable t) {
                 view.showLoading(false);
                 view.showError(t.getMessage());
             }
         });
     }
 
-    public Movie getMovie(int index) {
+    public TvSerie getMovie(int index) {
         return movies.get(index);
     }
 }

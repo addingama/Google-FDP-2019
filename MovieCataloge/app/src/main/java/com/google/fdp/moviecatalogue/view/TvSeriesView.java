@@ -1,6 +1,6 @@
 package com.google.fdp.moviecatalogue.view;
 
-import com.google.fdp.moviecatalogue.model.Movie;
+import com.google.fdp.moviecatalogue.model.TvSerie;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,8 @@ import java.util.ArrayList;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-public interface MoviesView {
-    void showMovies(ArrayList<Movie> data);
+public interface TvSeriesView {
+    void showMovies(ArrayList<TvSerie> data);
     void showLoading(boolean isLoading);
     void showError(String message);
 }

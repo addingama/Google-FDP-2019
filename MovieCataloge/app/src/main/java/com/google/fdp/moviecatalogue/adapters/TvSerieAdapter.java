@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.fdp.moviecatalogue.R;
-import com.google.fdp.moviecatalogue.model.Movie;
+import com.google.fdp.moviecatalogue.model.TvSerie;
 
 import java.util.ArrayList;
 
@@ -20,13 +20,13 @@ import java.util.ArrayList;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-    private ArrayList<Movie> movies;
+public class TvSerieAdapter extends RecyclerView.Adapter<TvSerieAdapter.MovieViewHolder> {
+    private ArrayList<TvSerie> movies;
 
-    public void setMovies(ArrayList<Movie> movies) {
+    public void setMovies(ArrayList<TvSerie> movies) {
         this.movies = movies;
     }
-    public MovieAdapter(Context context) {
+    public TvSerieAdapter(Context context) {
         movies = new ArrayList<>();
     }
 
@@ -45,11 +45,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public void onBindViewHolder(@NonNull MovieViewHolder viewHolder, int i) {
-        final Movie movie = movies.get(i);
+        final TvSerie movie = movies.get(i);
         Glide.with(viewHolder.itemView.getContext())
                 .load(movie.getPosterPath())
                 .into(viewHolder.imgPhoto);
-        viewHolder.txtTitle.setText(movie.getTitle());
+        viewHolder.txtTitle.setText(movie.getName());
         viewHolder.txtDescription.setText(movie.getOverview());
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +79,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     }
 
     public interface OnItemClickCallback {
-        void onItemClicked(Movie data);
+        void onItemClicked(TvSerie data);
     }
 }
