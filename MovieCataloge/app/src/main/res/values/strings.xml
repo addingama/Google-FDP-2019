@@ -62,5 +62,6 @@
     <string name="movies">Movies</string>
     <string name="tv_series">TV Series</string>
     <string name="change_language">Change Language</string>
+    <string name="image_poster">Image Poster</string>
 
 </resources>

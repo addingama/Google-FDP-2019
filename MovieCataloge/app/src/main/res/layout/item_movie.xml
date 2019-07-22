@@ -27,7 +27,7 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="10dp"
         tools:text="Deskripsi film"
-        android:layout_toRightOf="@id/img_photo"
+        android:layout_toEndOf="@id/img_photo"
         android:ellipsize="end"
         android:maxLines="3" />
 

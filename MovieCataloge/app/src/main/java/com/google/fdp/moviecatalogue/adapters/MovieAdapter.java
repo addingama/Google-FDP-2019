@@ -21,14 +21,12 @@ import java.util.ArrayList;
  * addingama@gmail.com
  */
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-    private Context context;
     private ArrayList<Movie> movies;
 
     public void setMovies(ArrayList<Movie> movies) {
         this.movies = movies;
     }
     public MovieAdapter(Context context) {
-        this.context = context;
         movies = new ArrayList<>();
     }
 

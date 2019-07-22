@@ -9,5 +9,6 @@
     <string name="movies">Film</string>
     <string name="tv_series">Film Seri</string>
     <string name="change_language">Ubah Bahasa</string>
+    <string name="image_poster">Gambar Poster</string>
 
 </resources>
