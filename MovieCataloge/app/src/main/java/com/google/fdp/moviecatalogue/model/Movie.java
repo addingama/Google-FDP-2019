@@ -14,70 +14,12 @@ import java.util.List;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
+
+@lombok.Data
 public class Movie implements Parcelable {
     @SerializedName("vote_count")
     @Expose
     public Integer voteCount;
-
-    public Integer getVoteCount() {
-        return voteCount;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public Boolean getVideo() {
-        return video;
-    }
-
-    public Double getVoteAverage() {
-        return voteAverage;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public Double getPopularity() {
-        return popularity;
-    }
-
-    public String getPosterPath() {
-        return "https://image.tmdb.org/t/p/w185/" + posterPath;
-    }
-
-    public String getOriginalLanguage() {
-        return originalLanguage;
-    }
-
-    public String getOriginalTitle() {
-        return originalTitle;
-    }
-
-    public List<Integer> getGenreIds() {
-        return genreIds;
-    }
-
-    public String getBackdropPath() {
-        return backdropPath;
-    }
-
-    public Boolean getAdult() {
-        return adult;
-    }
-
-    public String getOverview() {
-        return overview;
-    }
-
-    public String getReleaseDate() {
-        return releaseDate;
-    }
-
-    public static Creator<Movie> getCREATOR() {
-        return CREATOR;
-    }
 
     @SerializedName("id")
     @Expose
@@ -119,6 +61,9 @@ public class Movie implements Parcelable {
     @Expose
     public String releaseDate;
 
+    public String getPosterUrl() {
+        return "https://image.tmdb.org/t/p/w185/" + posterPath;
+    }
 
     @Override
     public int describeContents() {
@@ -164,6 +109,7 @@ public class Movie implements Parcelable {
         this.releaseDate = in.readString();
     }
 
+    @lombok.Getter
     public static final Parcelable.Creator<Movie> CREATOR = new Parcelable.Creator<Movie>() {
         @Override
         public Movie createFromParcel(Parcel source) {

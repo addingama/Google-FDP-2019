@@ -1,13 +1,14 @@
 package com.google.fdp.moviecatalogue.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.fdp.moviecatalogue.R;
@@ -47,7 +48,7 @@ public class TvSerieAdapter extends RecyclerView.Adapter<TvSerieAdapter.MovieVie
     public void onBindViewHolder(@NonNull MovieViewHolder viewHolder, int i) {
         final TvSerie movie = movies.get(i);
         Glide.with(viewHolder.itemView.getContext())
-                .load(movie.getPosterPath())
+                .load(movie.getPosterUrl())
                 .into(viewHolder.imgPhoto);
         viewHolder.txtTitle.setText(movie.getName());
         viewHolder.txtDescription.setText(movie.getOverview());

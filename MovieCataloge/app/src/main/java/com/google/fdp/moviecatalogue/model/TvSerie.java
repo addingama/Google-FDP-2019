@@ -9,11 +9,14 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+
 /**
  * Created by gama on 2019-07-22.
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
+@Data
 public class TvSerie implements Parcelable {
     @SerializedName("original_name")
     @Expose
@@ -55,55 +58,7 @@ public class TvSerie implements Parcelable {
     @Expose
     public String posterPath;
 
-    public String getOriginalName() {
-        return originalName;
-    }
-
-    public List<Integer> getGenreIds() {
-        return genreIds;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Double getPopularity() {
-        return popularity;
-    }
-
-    public List<String> getOriginCountry() {
-        return originCountry;
-    }
-
-    public Integer getVoteCount() {
-        return voteCount;
-    }
-
-    public String getFirstAirDate() {
-        return firstAirDate;
-    }
-
-    public String getBackdropPath() {
-        return backdropPath;
-    }
-
-    public String getOriginalLanguage() {
-        return originalLanguage;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public Double getVoteAverage() {
-        return voteAverage;
-    }
-
-    public String getOverview() {
-        return overview;
-    }
-
-    public String getPosterPath() {
+    public String getPosterUrl() {
         return "https://image.tmdb.org/t/p/w185/" + posterPath;
     }
 

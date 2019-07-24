@@ -1,11 +1,12 @@
 package com.google.fdp.moviecatalogue.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.google.fdp.moviecatalogue.R;
@@ -48,7 +49,7 @@ public class TvSerieDetailActivity extends AppCompatActivity {
         txtDate.setText(movie.getFirstAirDate());
         txtDescription.setText(movie.getOverview());
 
-        Glide.with(this).load(movie.getPosterPath()).into(imgPoster);
+        Glide.with(this).load(movie.getPosterUrl()).into(imgPoster);
     }
 
     @Override
