@@ -3,35 +3,36 @@ package com.google.fdp.moviecatalogue.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.fdp.moviecatalogue.R;
-import com.google.fdp.moviecatalogue.activities.TvSerieDetailActivity;
-import com.google.fdp.moviecatalogue.adapters.TvSerieAdapter;
-import com.google.fdp.moviecatalogue.model.TvSerie;
-import com.google.fdp.moviecatalogue.presenter.TvSeriesPresenter;
-import com.google.fdp.moviecatalogue.view.TvSeriesView;
+import com.google.fdp.moviecatalogue.activities.MovieDetailActivity;
+import com.google.fdp.moviecatalogue.adapters.MovieAdapter;
+import com.google.fdp.moviecatalogue.model.Movie;
+import com.google.fdp.moviecatalogue.presenter.MoviesPresenter;
+import com.google.fdp.moviecatalogue.view.MoviesView;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TvSeriesFragment extends Fragment implements TvSeriesView, TvSerieAdapter.OnItemClickCallback{
+public class TvSeriesFragment extends Fragment implements MoviesView, MovieAdapter.OnItemClickCallback{
     private RecyclerView rvTvSeries;
-    private TvSerieAdapter adapter;
+    private MovieAdapter adapter;
     private ProgressBar progressBar;
 
-    private ArrayList<TvSerie> tvSeries;
+    private ArrayList<Movie> tvSeries;
 
     private String TV_SERIES_DATA = "TV_SERIES_DATA";
 
@@ -50,9 +51,9 @@ public class TvSeriesFragment extends Fragment implements TvSeriesView, TvSerieA
         rvTvSeries = view.findViewById(R.id.rv_tv_series);
         rvTvSeries.setHasFixedSize(true);
 
-        adapter = new TvSerieAdapter(getActivity());
+        adapter = new MovieAdapter(getActivity());
         adapter.setOnItemClickCallback(this);
-        TvSeriesPresenter presenter = new TvSeriesPresenter(this);
+        MoviesPresenter presenter = new MoviesPresenter(this);
         if (savedInstanceState == null ) {
             presenter.fetchTvSeries();
         }
@@ -60,7 +61,7 @@ public class TvSeriesFragment extends Fragment implements TvSeriesView, TvSerieA
     }
 
     @Override
-    public void showMovies(ArrayList<TvSerie> movies) {
+    public void showMovies(ArrayList<Movie> movies) {
         rvTvSeries.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter.setMovies(movies);
         tvSeries = movies;
@@ -69,10 +70,10 @@ public class TvSeriesFragment extends Fragment implements TvSeriesView, TvSerieA
     }
 
     @Override
-    public void onItemClicked(TvSerie data) {
+    public void onItemClicked(Movie data) {
         if (getActivity() != null) {
-            Intent moveWithObjectIntent = new Intent(getActivity(), TvSerieDetailActivity.class);
-            moveWithObjectIntent.putExtra(TvSerieDetailActivity.EXTRA_MOVIE, data);
+            Intent moveWithObjectIntent = new Intent(getActivity(), MovieDetailActivity.class);
+            moveWithObjectIntent.putExtra(MovieDetailActivity.EXTRA_MOVIE, data);
             getActivity().startActivity(moveWithObjectIntent);
         }
 

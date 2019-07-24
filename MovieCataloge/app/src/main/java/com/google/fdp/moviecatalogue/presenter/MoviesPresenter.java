@@ -46,7 +46,26 @@ public class MoviesPresenter extends BasePresenter{
         });
     }
 
-    public Movie getMovie(int index) {
-        return movies.get(index);
+    public void fetchTvSeries() {
+        view.showLoading(true);
+        this.service.getTvSeries().enqueue(new Callback<MoviesResponse>() {
+            @Override
+            public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
+                view.showLoading(false);
+                if (response.body() != null) {
+                    movies = response.body().results;
+                    view.showMovies(response.body().results);
+                } else {
+                    view.showError(response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MoviesResponse> call, Throwable t) {
+                view.showLoading(false);
+                view.showError(t.getMessage());
+            }
+        });
     }
+
 }

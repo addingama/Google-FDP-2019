@@ -2,7 +2,6 @@ package com.google.fdp.moviecatalogue.services.api;
 
 import com.google.fdp.moviecatalogue.BuildConfig;
 import com.google.fdp.moviecatalogue.model.responses.MoviesResponse;
-import com.google.fdp.moviecatalogue.model.responses.TvSeriesResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -21,6 +20,6 @@ public interface MovieDbEndpoints {
 
 
     @GET("3/discover/tv?api_key=" + apiKey)
-    Call<TvSeriesResponse> getTvSeries();
+    Call<MoviesResponse> getTvSeries();
 
 }
