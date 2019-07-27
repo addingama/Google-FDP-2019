@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="language_setting">Pengaturan Bahasa</string>
+    <string name="actors">Aktris</string>
+    <string name="genres">Kategori</string>
+    <string name="overview">Sinopsis</string>
+    <string name="language">Bahasa :  %s</string>
+    <string name="director">Director : %s</string>
+    <string name="rating">Penilaian : %s</string>
+    <string name="title_menu_movie">Film</string>
+    <string name="title_menu_tv_show">TV Show</string>
+    <string name="title_menu_favorite">Disukai</string>
+</resources>

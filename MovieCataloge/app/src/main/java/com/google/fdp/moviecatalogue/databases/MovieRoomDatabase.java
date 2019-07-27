@@ -1,5 +1,6 @@
 package com.google.fdp.moviecatalogue.databases;
 
+import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
 /**
@@ -7,9 +8,10 @@ import androidx.room.RoomDatabase;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-//@Database(entities = {Movie.class, TvSerie.class}, version = 1, exportSchema = false)
+@Database(entities = {FavouriteMovie.class,}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
-//    public abstract MovieDao movieDao();
-//    public abstract TvSerieDao tvSerieDao();
+    public abstract FavouriteMovie favouriteMovieDao();
+
+    private 
 }
 
