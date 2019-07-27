@@ -15,7 +15,7 @@ import com.google.gson.annotations.SerializedName;
 public class Movie implements Parcelable {
     @SerializedName("id")
     @Expose
-    public Integer id;
+    public Long id;
     @SerializedName(value = "title", alternate = "name")
     @Expose
     public String title;
@@ -37,6 +37,20 @@ public class Movie implements Parcelable {
     @SerializedName("vote_average")
     @Expose
     public float rating = 0.0f;
+
+    public Movie() {
+    }
+
+    public Movie(Long id, String title, String releaseDate, String overview, String originalLanguage, String posterPath, String backdropPath, float rating) {
+        this.id = id;
+        this.title = title;
+        this.releaseDate = releaseDate;
+        this.overview = overview;
+        this.originalLanguage = originalLanguage;
+        this.posterPath = posterPath;
+        this.backdropPath = backdropPath;
+        this.rating = rating;
+    }
 
     public String getPosterUrl() {
         return "https://image.tmdb.org/t/p/w185/" + posterPath;
@@ -61,7 +75,7 @@ public class Movie implements Parcelable {
     }
 
     protected Movie(Parcel in) {
-        this.id = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.id = (Long) in.readValue(Long.class.getClassLoader());
         this.title = in.readString();
         this.releaseDate = in.readString();
         this.overview = in.readString();

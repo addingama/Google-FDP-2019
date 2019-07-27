@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.bumptech.glide.Glide;
@@ -24,7 +26,7 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     private MovieViewModel viewModel;
     private Movie movie;
-    private boolean isFavorite = false;
+    private boolean isFavourite = false;
 
     private ImageView ivPoster;
     private TextView tvTitle;
@@ -87,6 +89,18 @@ public class MovieDetailActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.detail_menu, menu);
+        viewModel.isFavourite(movie.getId() != null ? movie.getId() : 0, getIntent().getStringExtra(TYPE_KEY)).observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean status) {
+                isFavourite = status;
+                if(isFavourite) {
+                    menu.findItem(R.id.navigation_favorite).setIcon(ContextCompat.getDrawable(MovieDetailActivity.this, R.drawable.ic_favorite_black_24dp));
+                } else {
+                    menu.findItem(R.id.navigation_favorite).setIcon(ContextCompat.getDrawable(MovieDetailActivity.this, R.drawable.ic_favorite_border_black_24dp));
+                }
+            }
+        });
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -97,7 +111,11 @@ public class MovieDetailActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.navigation_favorite:
-
+                if (isFavourite) {
+                    viewModel.deleteFavourite(movie.getId(), getIntent().getStringExtra(TYPE_KEY));
+                } else {
+                    viewModel.insertFavourite(movie, getIntent().getStringExtra(TYPE_KEY));
+                }
                 break;
         }
         return super.onOptionsItemSelected(item);

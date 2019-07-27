@@ -1,6 +1,7 @@
 package com.google.fdp.moviecataloguev2.databases;
 
-import androidx.room.Delete;
+import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
@@ -11,13 +12,17 @@ import java.util.List;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
+@Dao
 public interface FavouriteTvShowDao {
     @Query("SELECT * FROM favourite_tv_show")
-    List<FavouriteTvShow> getAll();
+    LiveData<List<FavouriteTvShow>> getAll();
 
     @Insert
-    void insertAll(FavouriteTvShow... users);
+    void insert(FavouriteTvShow movie);
 
-    @Delete
-    void delete(FavouriteTvShow movie);
+    @Query("DELETE from favourite_tv_show WHERE id = :id")
+    void delete(Long id);
+
+    @Query("SELECT * FROM favourite_tv_show WHERE id = :id")
+    LiveData<List<FavouriteTvShow>> findById(Long id);
 }

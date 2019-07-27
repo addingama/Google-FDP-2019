@@ -11,10 +11,11 @@ import androidx.room.RoomDatabase;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-@Database(entities = {FavouriteMovie.class,}, version = 1, exportSchema = false)
+@Database(entities = {FavouriteMovie.class, FavouriteTvShow.class}, version = 1, exportSchema = false)
 public abstract class RoomMovieDatabase extends RoomDatabase {
 
         public abstract FavouriteMovieDao favouriteMovieDao();
+        public abstract FavouriteTvShowDao favouriteTvShowDao();
 
         private static RoomMovieDatabase INSTANCE = null;
 

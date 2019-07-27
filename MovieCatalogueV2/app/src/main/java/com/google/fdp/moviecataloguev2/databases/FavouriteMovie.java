@@ -21,6 +21,17 @@ public class FavouriteMovie {
     private float rating = 0.0f;
     private String backdrop;
 
+    public FavouriteMovie(Long id, String title, String released, String overview, String language, String poster, float rating, String backdrop) {
+        this.id = id;
+        this.title = title;
+        this.released = released;
+        this.overview = overview;
+        this.language = language;
+        this.poster = poster;
+        this.rating = rating;
+        this.backdrop = backdrop;
+    }
+
     public Long getId() {
         return id;
     }
