@@ -19,7 +19,6 @@ import com.google.fdp.moviecataloguev2.networks.MovieService;
 import com.google.fdp.moviecataloguev2.networks.RetrofitClient;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -36,6 +35,7 @@ public class MovieRepository {
     private FavouriteTvShowDao favouriteTvShowDao;
     private MutableLiveData<List<Movie>> mutableLiveData;
     private MovieService service;
+    private List<Movie> defaultResponse = new ArrayList<Movie>();
 
     private static MovieRepository INSTANCE;
 
@@ -62,7 +62,7 @@ public class MovieRepository {
     }
 
     public void updateData(String type) {
-        if (type == MovieFragment.MOVIE_KEY) {
+        if (MovieFragment.MOVIE_KEY.equals(type)) {
             service.getMovies(BuildConfig.API_KEY).enqueue(moviesCallback);
         } else {
             service.getTvSeries(BuildConfig.API_KEY).enqueue(moviesCallback);
@@ -73,13 +73,16 @@ public class MovieRepository {
         @Override
         public void onResponse(Call<BaseResponse<Movie>> call, Response<BaseResponse<Movie>> response) {
             if(response.isSuccessful()) {
-                mutableLiveData.postValue(response.body().results);
+                if (response.body() != null) {
+                    mutableLiveData.postValue(response.body().results);
+                }
+
             }
         }
 
         @Override
         public void onFailure(Call<BaseResponse<Movie>> call, Throwable t) {
-            mutableLiveData.postValue(null);
+            mutableLiveData.postValue(defaultResponse);
         }
     };
 
@@ -121,31 +124,51 @@ public class MovieRepository {
         }
     }
 
-    public void deleteFavourite(Long id, String type) {
+    public void deleteFavourite(Movie data, String type) {
         if (MovieFragment.MOVIE_KEY.equals(type)) {
-            favouriteMovieDao.delete(id);
+            favouriteMovieDao.delete(new FavouriteMovie(
+                    data.getId(),
+                    data.getTitle(),
+                    data.getReleaseDate(),
+                    data.getOverview(),
+                    data.getOriginalLanguage(),
+                    data.getPosterPath(),
+                    data.getRating(),
+                    data.getBackdropPath()
+            ));
         } else {
-            favouriteTvShowDao.delete(id);
+            favouriteTvShowDao.delete(new FavouriteTvShow(
+                    data.getId(),
+                    data.getTitle(),
+                    data.getReleaseDate(),
+                    data.getOverview(),
+                    data.getOriginalLanguage(),
+                    data.getPosterPath(),
+                    data.getRating(),
+                    data.getBackdropPath()
+            ));
         }
     }
 
     public LiveData<List<Movie>> getAllFavourite(String type) {
-        List<Movie> movies = new ArrayList<Movie>();
+
         if (MovieFragment.MOVIE_KEY.equals(type)) {
-            return Transformations.map(favouriteMovieDao.getAll(), it -> {
-                Iterator<FavouriteMovie> iterator = it.iterator();
-                while (iterator.hasNext()) {
-                    movies.add(constructFavouriteToMovie(iterator.next()));
+
+            return Transformations.map(favouriteMovieDao.getAllFavoriteMovies(), it -> {
+                List<Movie> movies = new ArrayList<Movie>();
+                for (FavouriteMovie favouriteMovie : it) {
+                    movies.add(constructFavouriteToMovie(favouriteMovie));
                 }
                 return movies;
             });
         } else {
-            return Transformations.map(favouriteTvShowDao.getAll(), it -> {
-                Iterator<FavouriteTvShow> iterator = it.iterator();
-                while (iterator.hasNext()) {
-                    movies.add(constructFavouriteToMovie(iterator.next()));
+
+            return Transformations.map(favouriteTvShowDao.getAllFavoriteTvShows(), it -> {
+                List<Movie> tvSeries = new ArrayList<Movie>();
+                for (FavouriteTvShow favouriteTvShow : it) {
+                    tvSeries.add(constructFavouriteToMovie(favouriteTvShow));
                 }
-                return movies;
+                return tvSeries;
             });
         }
     }

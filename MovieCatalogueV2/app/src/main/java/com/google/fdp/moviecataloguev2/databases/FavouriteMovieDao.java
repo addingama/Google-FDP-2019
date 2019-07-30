@@ -2,6 +2,7 @@ package com.google.fdp.moviecataloguev2.databases;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -16,13 +17,13 @@ import java.util.List;
 @Dao
 public interface FavouriteMovieDao {
     @Query("SELECT * FROM favourite_movies")
-    LiveData<List<FavouriteMovie>> getAll();
+    LiveData<List<FavouriteMovie>> getAllFavoriteMovies();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(FavouriteMovie movie);
 
-    @Query("DELETE from favourite_movies WHERE id = :id")
-    void delete(Long id);
+    @Delete()
+    void delete(FavouriteMovie movie);
 
     @Query("SELECT * FROM favourite_movies WHERE id = :id")
     LiveData<List<FavouriteMovie>> findById(Long id);

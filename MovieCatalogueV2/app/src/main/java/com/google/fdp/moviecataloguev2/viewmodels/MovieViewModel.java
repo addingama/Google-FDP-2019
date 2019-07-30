@@ -43,8 +43,8 @@ public class MovieViewModel extends AndroidViewModel {
         movieRepository.insertFavourite(data, type);
     }
 
-    public void deleteFavourite(Long id, String type) {
-        movieRepository.deleteFavourite(id, type);
+    public void deleteFavourite(Movie movie, String type) {
+        movieRepository.deleteFavourite(movie, type);
     }
 
     public LiveData<Boolean> isFavourite(Long id, String type) {

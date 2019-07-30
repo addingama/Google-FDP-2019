@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.fdp.moviecataloguev2.fragments.FavouriteFragment;
 import com.google.fdp.moviecataloguev2.fragments.MovieFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 openFragment(MovieFragment.newInstance(MovieFragment.TV_SHOW_KEY, false));
                 return true;
             case R.id.navigation_favorite:
+                openFragment(new FavouriteFragment());
                 return true;
             default:
                 return false;

@@ -112,7 +112,7 @@ public class MovieDetailActivity extends AppCompatActivity {
                 break;
             case R.id.navigation_favorite:
                 if (isFavourite) {
-                    viewModel.deleteFavourite(movie.getId(), getIntent().getStringExtra(TYPE_KEY));
+                    viewModel.deleteFavourite(movie, getIntent().getStringExtra(TYPE_KEY));
                 } else {
                     viewModel.insertFavourite(movie, getIntent().getStringExtra(TYPE_KEY));
                 }

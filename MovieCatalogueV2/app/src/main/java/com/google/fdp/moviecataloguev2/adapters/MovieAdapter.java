@@ -15,7 +15,6 @@ import com.bumptech.glide.Glide;
 import com.google.fdp.moviecataloguev2.R;
 import com.google.fdp.moviecataloguev2.models.Movie;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,17 +27,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     private List<Movie> movies;
     private OnItemClickCallback onItemClickCallback;
 
-    public MovieAdapter(Context context) {
-        movies = new ArrayList<>();
+    public MovieAdapter(Context context, List<Movie> movies) {
+        this.movies = movies;
         this.context = context;
     }
 
     public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback;
-    }
-
-    public void setMovies(List<Movie> movies) {
-        this.movies = movies;
     }
 
     @NonNull
@@ -56,6 +51,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                 .into(viewHolder.ivPoster);
         viewHolder.tvTitle.setText(movie.getTitle());
         viewHolder.tvReleased.setText(movie.getReleaseDate());
+        viewHolder.tvRating.setText(movie.getRating() + "");
+        viewHolder.rbRating.setRating(movie.getRating());
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

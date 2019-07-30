@@ -21,6 +21,7 @@ import com.google.fdp.moviecataloguev2.adapters.MovieAdapter;
 import com.google.fdp.moviecataloguev2.models.Movie;
 import com.google.fdp.moviecataloguev2.viewmodels.MovieViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickCallback {
@@ -32,10 +33,14 @@ public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickC
 
     private MovieAdapter adapter;
     private MovieViewModel viewModel;
+    private List<Movie> movies = new ArrayList<Movie>();
 
 
     private RecyclerView rvMovie;
     private ProgressBar pbLoading;
+
+    private String currentType = "MOVIE";
+    private boolean isFavourite = false;
 
 
     public MovieFragment() {
@@ -67,6 +72,11 @@ public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickC
         rvMovie = view.findViewById(R.id.rvMovie);
         pbLoading = view.findViewById(R.id.pbLoading);
 
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            currentType = bundle.getString(TYPE_KEY);
+            isFavourite = bundle.getBoolean(IS_FAVORITE_KEY);
+        }
 
         return view;
     }
@@ -74,18 +84,15 @@ public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickC
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        adapter = new MovieAdapter(getActivity());
+        adapter = new MovieAdapter(getActivity(), movies);
         rvMovie.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvMovie.setAdapter(adapter);
         adapter.setOnItemClickCallback(this);
 
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            if (bundle.getBoolean(IS_FAVORITE_KEY)) {
-                //
-            } else {
-                loadMovies();
-            }
+        if (isFavourite) {
+            loadFavourites();
+        } else {
+            loadMovies();
         }
 
     }
@@ -95,25 +102,23 @@ public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickC
         updateItem();
     }
 
-    private void updateItem() {
-        showLoading(true);
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            String type = bundle.getString(TYPE_KEY);
-            viewModel.updateItem(type != null ? type : MOVIE_KEY);
-        }
+    private void loadFavourites() {
+        viewModel.getAllFavourite(this.currentType).observe(this, onComplete);
     }
 
-    private Observer<List<Movie>> onComplete = new Observer<List<Movie>>() {
-        @Override
-        public void onChanged(List<Movie> movies) {
-            showLoading(false);
-            if (movies != null) {
-                adapter.setMovies(movies);
-                adapter.notifyDataSetChanged();
-            }
-        }
-    };
+    private void updateItem() {
+        showLoading(true);
+        viewModel.updateItem(this.currentType);
+    }
+
+    private Observer<List<Movie>> onComplete = movies -> updateAdapter(movies);
+
+    private void updateAdapter(List<Movie> movies) {
+        showLoading(false);
+        this.movies.clear();
+        this.movies.addAll(movies);
+        adapter.notifyDataSetChanged();
+    }
 
     private void showLoading(boolean state) {
         if (state) {
@@ -136,12 +141,7 @@ public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickC
 
     @Override
     public void onItemClicked(Movie data) {
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            String type = bundle.getString(TYPE_KEY);
-            MovieDetailActivity.startActivity(getActivity(), data,
-                    type != null ? type : MOVIE_KEY);
-        }
-
+        MovieDetailActivity.startActivity(getActivity(), data,
+                this.currentType != null ? this.currentType : MOVIE_KEY);
     }
 }

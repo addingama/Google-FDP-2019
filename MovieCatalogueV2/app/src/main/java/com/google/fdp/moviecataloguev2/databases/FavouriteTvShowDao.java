@@ -2,6 +2,7 @@ package com.google.fdp.moviecataloguev2.databases;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
@@ -15,13 +16,13 @@ import java.util.List;
 @Dao
 public interface FavouriteTvShowDao {
     @Query("SELECT * FROM favourite_tv_show")
-    LiveData<List<FavouriteTvShow>> getAll();
+    LiveData<List<FavouriteTvShow>> getAllFavoriteTvShows();
 
     @Insert
     void insert(FavouriteTvShow movie);
 
-    @Query("DELETE from favourite_tv_show WHERE id = :id")
-    void delete(Long id);
+    @Delete
+    void delete(FavouriteTvShow movie);
 
     @Query("SELECT * FROM favourite_tv_show WHERE id = :id")
     LiveData<List<FavouriteTvShow>> findById(Long id);
