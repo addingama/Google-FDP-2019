@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Destination</string>
+    <string name="name">Nama</string>
+    <string name="location">Lokasi</string>
+    <string name="detail">Detail</string>
+    <string name="about">About</string>
+    <string name="author">Addin Gama Bertaqwa</string>
+    <string name="author_email">punyagama@yahoo.com</string>
+</resources>
