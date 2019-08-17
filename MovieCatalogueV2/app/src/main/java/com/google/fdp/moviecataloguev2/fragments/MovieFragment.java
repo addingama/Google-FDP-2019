@@ -89,21 +89,37 @@ public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickC
         rvMovie.setAdapter(adapter);
         adapter.setOnItemClickCallback(this);
 
+        boolean isFromInstance = savedInstanceState != null;
+
         if (isFavourite) {
-            loadFavourites();
+            loadFavourites(savedInstanceState, isFromInstance);
         } else {
-            loadMovies();
+            loadMovies(savedInstanceState, isFromInstance);
         }
 
     }
 
-    private void loadMovies() {
-        viewModel.getLiveData().observe(this, onComplete);
-        updateItem();
+    private void loadMovies(Bundle bundle, boolean isFromInstance) {
+        if (isFromInstance) {
+            String title = this.getBundleTitle();
+            ArrayList<Movie> data = bundle.getParcelableArrayList(title);
+            updateAdapter(data);
+        } else {
+            viewModel.getLiveData().observe(this, onComplete);
+            updateItem();
+        }
+
     }
 
-    private void loadFavourites() {
-        viewModel.getAllFavourite(this.currentType).observe(this, onComplete);
+    private void loadFavourites(Bundle bundle, boolean isFromInstance) {
+        if (isFromInstance) {
+            String title = this.getBundleTitle();
+            ArrayList<Movie> data = bundle.getParcelableArrayList(title);
+            updateAdapter(data);
+        } else {
+            viewModel.getAllFavourite(this.currentType).observe(this, onComplete);
+        }
+
     }
 
     private void updateItem() {
@@ -143,5 +159,16 @@ public class MovieFragment extends Fragment implements MovieAdapter.OnItemClickC
     public void onItemClicked(Movie data) {
         MovieDetailActivity.startActivity(getActivity(), data,
                 this.currentType != null ? this.currentType : MOVIE_KEY);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        String title = this.getBundleTitle();
+        outState.putParcelableArrayList(title, new ArrayList<Movie>(movies));
+        super.onSaveInstanceState(outState);
+    }
+
+    private String getBundleTitle() {
+        return this.currentType + (this.isFavourite ? "-Favourite" : "");
     }
 }

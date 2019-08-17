@@ -33,7 +33,9 @@ public class MovieViewModel extends AndroidViewModel {
     public void updateItem(String type) {
         movieRepository.updateData(type);
     }
-
+    public void searchData(String type, String keyword) {
+        movieRepository.searchData(type, keyword);
+    }
 
     public LiveData<List<Movie>> getAllFavourite(String type) {
         return movieRepository.getAllFavourite(type);

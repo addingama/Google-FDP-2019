@@ -16,9 +16,15 @@ public interface MovieService {
     @GET("3/discover/movie")
     Call<BaseResponse<Movie>> getMovies(@Query("api_key") String apiKey);
 
+    @GET("3/search/movie?language=en-US")
+    Call<BaseResponse<Movie>> searchMovies(@Query("api_key") String apiKey, @Query("query") String keyword);
 
     @GET("3/discover/tv")
     Call<BaseResponse<Movie>> getTvSeries(@Query("api_key") String apiKey);
+
+    @GET("3/search/tv?language=en-US")
+    Call<BaseResponse<Movie>> searchTvSeries(@Query("api_key") String apiKey, @Query("query") String keyword);
+
 
 }
 

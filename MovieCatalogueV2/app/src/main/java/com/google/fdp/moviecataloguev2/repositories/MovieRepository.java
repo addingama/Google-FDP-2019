@@ -69,6 +69,14 @@ public class MovieRepository {
         }
     }
 
+    public void searchData(String type, String keyword) {
+        if (MovieFragment.MOVIE_KEY.equals(type)) {
+            service.searchMovies(BuildConfig.API_KEY, keyword).enqueue(moviesCallback);
+        } else {
+            service.searchTvSeries(BuildConfig.API_KEY, keyword).enqueue(moviesCallback);
+        }
+    }
+
     private Callback<BaseResponse<Movie>> moviesCallback = new Callback<BaseResponse<Movie>>() {
         @Override
         public void onResponse(Call<BaseResponse<Movie>> call, Response<BaseResponse<Movie>> response) {
