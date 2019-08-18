@@ -13,4 +13,5 @@
     <string name="title_menu_favorite">Disukai</string>
     <string name="search">Cari</string>
     <string name="search_hint">Masukkan kata</string>
+    <string name="empty_text">Tidak Ada Data</string>
 </resources>

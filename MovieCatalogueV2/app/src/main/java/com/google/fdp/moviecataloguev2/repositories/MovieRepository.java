@@ -210,4 +210,26 @@ public class MovieRepository {
             return new Movie();
         }
     }
+
+    public List<Movie> getAllFavouriteMovieForWidget(){
+        List<Movie> movies = new ArrayList<Movie>();
+        List<FavouriteMovie> favouriteMovies = favouriteMovieDao.getAllFavoriteMoviesForWidget();
+
+        for (FavouriteMovie favouriteMovie: favouriteMovies) {
+            movies.add(constructFavouriteToMovie(favouriteMovie));
+        }
+
+        return movies;
+    }
+
+    public List<Movie> getAllFavouriteTvShowForWidget(){
+        List<Movie> movies = new ArrayList<Movie>();
+        List<FavouriteMovie> favouriteMovies = favouriteTvShowDao.getAllFavoriteTvShowsForWidget();
+
+        for (FavouriteMovie favouriteMovie: favouriteMovies) {
+            movies.add(constructFavouriteToMovie(favouriteMovie));
+        }
+
+        return movies;
+    }
 }

@@ -26,4 +26,7 @@ public interface FavouriteTvShowDao {
 
     @Query("SELECT * FROM favourite_tv_show WHERE id = :id")
     LiveData<List<FavouriteTvShow>> findById(Long id);
+
+    @Query("SELECT * FROM favourite_tv_show")
+    List<FavouriteMovie> getAllFavoriteTvShowsForWidget();
 }
