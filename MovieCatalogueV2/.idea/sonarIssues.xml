@@ -23,6 +23,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalog 3/app/src/main/java/com/alfianh/moviecatalog/alarm/NotificationHelper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../MovieCataloge/app/src/main/java/com/google/fdp/moviecatalogue/databases/FavouriteMovie.java">
           <value>
             <set />
@@ -48,6 +53,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/FavouriteMovieWidget.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/MainActivity.java">
           <value>
             <set />
@@ -58,12 +68,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/SettingActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/adapters/FavouriteTabAdapter.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/adapters/MovieAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/alarm/DailyReminderManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/alarm/NotificationHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/alarm/ReleaseReminderManager.java">
           <value>
             <set />
           </value>
@@ -128,7 +158,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/services/StackWidgetService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/viewmodels/MovieViewModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/widgets/FavouriteMovieWidget.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/widgets/StackRemoteViewsFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/widgets/StackWidgetService.java">
           <value>
             <set />
           </value>
@@ -139,6 +189,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_detail.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/favourite_movie_widget.xml">
           <value>
             <set />
           </value>
@@ -154,6 +214,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/item_movie.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/widget_item.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/menu/setting_menu.xml">
           <value>
             <set />
           </value>
@@ -174,6 +244,61 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/xml/favourite_movie_widget_info.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/java/id/banksampah/smashmobile/allianz/AllianzHomeActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/java/id/banksampah/smashmobile/allianz/data/models/SekociSmash.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/java/id/banksampah/smashmobile/allianz/ui/adapters/SekociVoucherAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/java/id/banksampah/smashmobile/allianz/ui/main/AllianzHomeSectionPagerAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/java/id/banksampah/smashmobile/allianz/ui/main/MyVoucherFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/res/layout/fragment_allianz_available_product.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/res/layout/fragment_my_voucher.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/res/layout/row_sekoci_voucher.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/res/values/strings.xml">
           <value>
             <set />
           </value>

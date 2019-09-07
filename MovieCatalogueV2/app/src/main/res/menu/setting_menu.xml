@@ -8,6 +8,14 @@
         app:actionViewClass="android.widget.SearchView"
         />
     <item
+        android:id="@+id/menu_reminder_setting"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="@string/reminder_setting"
+        app:showAsAction="always"
+        >
+
+    </item>
+    <item
         android:id="@+id/menu_language_setting"
         android:icon="@drawable/ic_language_white_24dp"
         android:title="@string/language_setting"

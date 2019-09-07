@@ -85,9 +85,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_language_setting) {
-            startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
+        switch (item.getItemId()) {
+            case R.id.menu_language_setting:
+                startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
+                break;
+            case R.id.menu_reminder_setting:
+                startActivity(new Intent(this, SettingActivity.class));
+                break;
         }
+
         return super.onOptionsItemSelected(item);
     }
 

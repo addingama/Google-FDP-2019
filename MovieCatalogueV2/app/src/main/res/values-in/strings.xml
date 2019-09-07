@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Katalog Film</string>
     <string name="language_setting">Pengaturan Bahasa</string>
+    <string name="reminder_setting">Pengaturan Pengingat</string>
     <string name="actors">Aktris</string>
     <string name="genres">Kategori</string>
     <string name="overview">Sinopsis</string>
@@ -13,5 +14,12 @@
     <string name="title_menu_favorite">Disukai</string>
     <string name="search">Cari</string>
     <string name="search_hint">Masukkan kata</string>
+    <string name="add_widget">Tambah Widget</string>
     <string name="empty_text">Tidak Ada Data</string>
+    <string name="release_reminder">Release Reminder</string>
+    <string name="daily_reminder">Pengingat Harian</string>
+    <string name="release_message">%s tayang hari ini, jangan sampai ketinggalan!</string>
+    <string name="appwidget_text">Film Favorit</string>
+    <string name="daily_notification_title">Katalog Film</string>
+    <string name="daily_notification_message">Hei, aku rindu :(</string>
 </resources>
