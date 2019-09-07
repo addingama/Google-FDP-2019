@@ -11,6 +11,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "favourite_movies")
 public class FavouriteMovie {
+    public static String TABLE_NAME = "favorite_movies";
     @PrimaryKey
     private Long id;
     private String title;

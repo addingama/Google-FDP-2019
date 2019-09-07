@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.google.fdp.moviecataloguev2">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <permission android:name="com.google.fdp.moviecataloguev2.READ_DATABASE" android:protectionLevel="normal" />
+    <permission android:name="com.google.fdp.moviecataloguev2.WRITE_DATABASE" android:protectionLevel="normal" />
+
+
+    <dist:module dist:instant="true"/>
 
     <application
         android:allowBackup="true"
@@ -47,6 +56,14 @@
         <service
             android:name=".services.StackWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <provider
+            android:authorities="com.google.fdp.moviecataloguev2.databases.provider"
+            android:name=".databases.provider.FavouriteContentProvider"
+            android:exported="true"
+            android:readPermission="com.google.fdp.moviecataloguev2.READ_DATABASE"
+            android:writePermission="com.google.fdp.moviecataloguev2.WRITE_DATABASE"
+            />
     </application>
 
 </manifest>

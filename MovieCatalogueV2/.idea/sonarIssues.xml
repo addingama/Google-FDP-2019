@@ -28,6 +28,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalog 3/favoritemovie/src/main/java/com/alfianh/favoritemovie/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../MovieCataloge/app/src/main/java/com/google/fdp/moviecatalogue/databases/FavouriteMovie.java">
           <value>
             <set />
@@ -119,6 +124,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/databases/RoomMovieDatabase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecataloguev2/databases/provider/FavouriteContentProvider.java">
           <value>
             <set />
           </value>
@@ -249,6 +259,51 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/xml/favourite_movie_widget_info.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/java/com/google/fdp/favouritemovie/DatabaseContract.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/java/com/google/fdp/favouritemovie/LoadMoviesCallback.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/java/com/google/fdp/favouritemovie/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/java/com/google/fdp/favouritemovie/Movie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/java/com/google/fdp/favouritemovie/MovieAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favouritemovie/src/main/res/layout/item_movie.xml">
           <value>
             <set />
           </value>

@@ -1,5 +1,7 @@
 package com.google.fdp.moviecataloguev2.databases;
 
+import android.database.Cursor;
+
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -31,4 +33,9 @@ public interface FavouriteMovieDao {
     @Query("SELECT * FROM favourite_movies")
     List<FavouriteMovie> getAllFavoriteMoviesForWidget();
 
+    @Query("SELECT * FROM favourite_movies")
+    Cursor getAllFavoriteMoviesForContentProvider();
+
+    @Query("SELECT * FROM favourite_movies WHERE id = :id")
+    Cursor findByIdForContentProvider(Long id);
 }
