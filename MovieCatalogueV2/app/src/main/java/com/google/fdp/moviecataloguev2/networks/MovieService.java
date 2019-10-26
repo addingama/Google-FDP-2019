@@ -25,6 +25,10 @@ public interface MovieService {
     @GET("3/search/tv?language=en-US")
     Call<BaseResponse<Movie>> searchTvSeries(@Query("api_key") String apiKey, @Query("query") String keyword);
 
+    @GET("3/discover/movie")
+    Call<BaseResponse<Movie>> getMovieReleaseToday(@Query("api_key") String apiKey,
+                                                   @Query("primary_release_date.gte") String startDate,
+                                                   @Query("primary_release_date.lte") String endDate);
 
 }
 

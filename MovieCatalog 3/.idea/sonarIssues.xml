@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/alfianh/moviecatalog/alarm/NotificationHelper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/favoritemovie/src/main/java/com/alfianh/favoritemovie/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/SettingActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/alarm/DailyReminderManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/alarm/NotificationHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/alarm/ReleaseReminderManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/FavouriteMovie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/FavouriteMovieDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/FavouriteTvShowDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/provider/FavouriteContentProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/repositories/MovieRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/services/StackWidgetService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/widgets/StackRemoteViewsFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/res/layout/activity_setting.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/res/layout/widget_item.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/res/menu/setting_menu.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/res/values-in/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/res/xml/favourite_movie_widget_info.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/java/com/google/fdp/favouritemovie/DatabaseContract.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/java/com/google/fdp/favouritemovie/LoadMoviesCallback.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/java/com/google/fdp/favouritemovie/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/java/com/google/fdp/favouritemovie/Movie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/java/com/google/fdp/favouritemovie/MovieAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/favouritemovie/src/main/res/layout/item_movie.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

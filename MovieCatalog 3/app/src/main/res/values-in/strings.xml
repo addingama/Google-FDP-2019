@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="language_setting">Pengaturan Bahasa</string>
+    <string name="actors">Aktris</string>
+    <string name="genres">Kategori</string>
+    <string name="overview">Sinopsis</string>
+    <string name="language">Bahasa :  %s</string>
+    <string name="director">Director : %s</string>
+    <string name="rating">Penilaian : %s</string>
+    <string name="title_menu_movie">Film</string>
+    <string name="title_menu_tv_show">TV Show</string>
+    <string name="title_menu_favorite">Disukai</string>
+    <string name="title_menu_search">Pencarian</string>
+    <string name="search_hint">Masukan pencarian</string>
+    <string name="appwidget_text">Film Favorite</string>
+    <string name="empty_text">Data Tidak Ada</string>
+    <string name="add_widget">Tambah Widget</string>
+    <string name="daily_notification_title">Katalog Film</string>
+    <string name="daily_notification_message">Hei, aku rindu :(</string>
+    <string name="reminder_setting">Pengaturan Pengingat</string>
+    <string name="release_reminder">Pengingat Film</string>
+    <string name="daily_reminder">Pengingat Harian</string>
+    <string name="release_message">%s tayang hari ini, jangan sampai ketinggalan!</string>
+</resources>

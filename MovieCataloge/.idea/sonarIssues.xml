@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../MovieCatalog 2/app/src/main/java/com/alfianh/moviecatalog/MovieDetailActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
@@ -43,6 +48,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/MovieCatalogueApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/activities/MainActivity.java">
           <value>
             <set />
@@ -53,7 +63,62 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/activities/TvSerieDetailActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/adapters/MovieAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/adapters/TvSerieAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/AppDatabase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/FavouriteMovie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/FavouriteMovieDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/FavouriteTvShow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/MovieCatalogueDB.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/MovieRoomDatabase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/dao/MovieDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/databases/dao/TvSerieDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/fragments/MovieFragment.java">
           <value>
             <set />
           </value>
@@ -68,7 +133,62 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/interfaces/GetMoviesCallback.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/interfaces/MyMoviesCallback.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/Movie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/MovieApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/MovieOld.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/TvSerie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/dao/MovieDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/responses/BaseResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/responses/MovieResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/responses/MoviesResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/model/responses/TvSeriesResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/presenter/BasePresenter.java">
           <value>
             <set />
           </value>
@@ -83,7 +203,57 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/presenter/TvSeriesPresenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/repositories/MovieRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/services/api/MovieDbClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/services/api/MovieDbEndpoints.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/services/api/MovieService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/services/api/RetrofitClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/tasks/GetMoviesTask.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/tasks/MyAsyncTaskCallback.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/view/MainView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/view/MoviesView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/google/fdp/moviecatalogue/view/TvSeriesView.java">
           <value>
             <set />
           </value>
@@ -94,6 +264,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_detail.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_tv_serie_detail.xml">
           <value>
             <set />
           </value>
@@ -144,6 +319,86 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/MovieDetailActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/adapters/MovieAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/FavouriteMovie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/FavouriteMovieDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/FavouriteTvShow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/FavouriteTvShowDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/databases/RoomMovieDatabase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/fragments/MovieFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/models/Movie.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/models/responses/BaseResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/networks/MovieService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/networks/RetrofitClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/repositories/MovieRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MovieCatalogueV2/app/src/main/java/com/google/fdp/moviecataloguev2/viewmodels/MovieViewModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mySmash/app/src/main/java/id/banksampah/smashmobile/activities/MainActivity.java">
           <value>
             <set />
           </value>

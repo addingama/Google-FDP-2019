@@ -2,7 +2,7 @@ package com.google.fdp.moviecatalogue;
 
 import android.app.Application;
 
-import com.google.fdp.moviecatalogue.databases.AppDatabase;
+import com.google.fdp.moviecatalogue.databases.MovieRoomDatabase;
 
 /**
  * Created by gama on 2019-07-24.
@@ -10,13 +10,13 @@ import com.google.fdp.moviecatalogue.databases.AppDatabase;
  * addingama@gmail.com
  */
 public class MovieCatalogueApplication extends Application {
-    public static AppDatabase db;
+    public static MovieRoomDatabase db;
     @Override
     public void onCreate() {
         super.onCreate();
 
 //        db = Room.databaseBuilder(getApplicationContext(),
-//                AppDatabase.class, "movie-catalogue").fallbackToDestructiveMigration()
+//                MovieRoomDatabase.class, "movie-catalogue").fallbackToDestructiveMigration()
 //                .build();
 
 

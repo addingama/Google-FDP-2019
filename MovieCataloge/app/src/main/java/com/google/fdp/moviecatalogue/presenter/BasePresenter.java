@@ -1,7 +1,7 @@
 package com.google.fdp.moviecatalogue.presenter;
 
-import com.google.fdp.moviecatalogue.services.api.MovieDbClient;
-import com.google.fdp.moviecatalogue.services.api.MovieDbEndpoints;
+import com.google.fdp.moviecatalogue.services.api.RetrofitClient;
+import com.google.fdp.moviecatalogue.services.api.MovieService;
 import com.google.gson.Gson;
 
 /**
@@ -10,11 +10,11 @@ import com.google.gson.Gson;
  * addingama@gmail.com
  */
 public class BasePresenter {
-    protected MovieDbEndpoints service;
+    protected MovieService service;
     protected Gson gson;
 
     public BasePresenter() {
-        this.service = MovieDbClient.getInstance().getService();
+        this.service = RetrofitClient.getInstance().getService();
         this.gson = new Gson();
     }
 }

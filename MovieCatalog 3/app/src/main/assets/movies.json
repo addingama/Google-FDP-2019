@@ -1,0 +1,40 @@
+{
+  "movies": [
+    {
+      "title": "Dark Phoenix",
+      "released": "June 7, 2019",
+      "rating": 3.0,
+      "overview": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy.",
+      "language": "English",
+      "genre": "Science Fiction, Action",
+      "director": "Simon Kinberg",
+      "actors": "Sophie Turner (Dark Phoenix), James McAvoy (Professor X), Michael Fassbender (Magneto), Jennifer Lawrence (Mystique), Jessica Chastain(Vuk)",
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kZv92eTc0Gg3mKxqjjDAM73z9cy.jpg"
+    },
+    {
+      "title": "Aladdin",
+      "released": "May 24, 2019",
+      "rating": 4.8,
+      "overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.",
+      "language": "English",
+      "genre": "Adventure, Fantasy, Romance, Comedy, Family",
+      "director": "Guy Ritchie",
+      "actors": "Mena Massoud (Aladdin), Naomi Scott (Jasmine), Will Smith (Ganie), Marwan Kenzari (Jafar), Navid Negahban (The Sultan)",
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/raIVRsmpL6U1uAcx0eFdypvg43L.jpg"
+    },
+    {
+      "title": "Godzilla: King of the Monsters",
+      "released": "May 31, 2019",
+      "rating": 3.9,
+      "overview": "The new story follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species—thought to be mere myths—rise again, they all vie for supremacy, leaving humanity’s very existence hanging in the balance.",
+      "language": "English",
+      "genre": "Science Fiction, Thriller, Action",
+      "director": "Michael Dougherty",
+      "actors": "Kyle Chandler (Mark Russell), Vera Farmiga (Emma Russell), Millie Bobby Brown (Madison Russell), Ken Watanabe (Dr. Ishiro Serizawa), Sally Hawkins (Dr. Vivienne Graham)",
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/paDe5Mw0nhsAkcCMsNmMdvJqkNk.jpg"
+    }
+  ]
+}

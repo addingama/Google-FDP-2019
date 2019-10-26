@@ -18,29 +18,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Addin Gama Bertaqwa
  * addingama@gmail.com
  */
-public class MovieDbClient {
-    private MovieDbEndpoints service;
-    private static MovieDbClient client = null;
-
-
-    public MovieDbClient() {
-         Retrofit retrofit;
-         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+public class RetrofitClient {
+    public <S> S createService(Class<S> serviceClass) {
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                 .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
                 .create();
-
-        retrofit = new Retrofit.Builder().baseUrl("https://api.themoviedb.org")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.themoviedb.org")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(getOkHttp().build())
                 .build();
-        service = retrofit.create(MovieDbEndpoints.class);
-    }
 
-    public static MovieDbClient getInstance() {
-        if (client == null) {
-            client = new MovieDbClient();
-        }
-        return client;
+        return retrofit.create(serviceClass);
     }
 
     private OkHttpClient.Builder getOkHttp() {
@@ -63,9 +51,5 @@ public class MovieDbClient {
         builder.writeTimeout(360, TimeUnit.SECONDS);
 
         return builder;
-    }
-
-    public MovieDbEndpoints getService() {
-        return service;
     }
 }

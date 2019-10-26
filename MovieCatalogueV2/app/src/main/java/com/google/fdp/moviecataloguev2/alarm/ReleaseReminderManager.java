@@ -39,18 +39,16 @@ public class ReleaseReminderManager extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        new RetrofitClient().createService(MovieService.class).getMovies(BuildConfig.API_KEY).enqueue(new Callback<BaseResponse<Movie>>() {
+        new RetrofitClient().createService(MovieService.class).getMovieReleaseToday(BuildConfig.API_KEY, currentDate(), currentDate()).enqueue(new Callback<BaseResponse<Movie>>() {
             @Override
             public void onResponse(Call<BaseResponse<Movie>> call, Response<BaseResponse<Movie>> response) {
                 if(response.isSuccessful()){
                     if (response.body() != null) {
                         if (response.body().results != null) {
                             for (Movie movie : response.body().results) {
-                                if (isReleaseToday(movie.getReleaseDate())) {
-                                    new NotificationHelper(context).createNotification(
-                                            movie.getTitle(),
-                                            context.getString(R.string.release_message, movie.getTitle()));
-                                }
+                                new NotificationHelper(context).createNotification(
+                                        movie.getTitle(),
+                                        context.getString(R.string.release_message, movie.getTitle()));
                             }
                         }
                     }
@@ -105,5 +103,10 @@ public class ReleaseReminderManager extends BroadcastReceiver {
         String now = df.format(new Date());
 
         return date.equals(now);
+    }
+
+    private String currentDate() {
+        SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT, Locale.getDefault());
+        return df.format(new Date());
     }
 }

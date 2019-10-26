@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Movie Catalog</string>
+    <string name="language_setting">Language Setting</string>
+    <string name="reminder_setting">Reminder Setting</string>
+    <string name="actors">Actors</string>
+    <string name="genres">Genres</string>
+    <string name="overview">Overview</string>
+    <string name="language">Language :  %s</string>
+    <string name="director">Director : %s</string>
+    <string name="rating">Rating : %s</string>
+    <string name="title_menu_movie">Movie</string>
+    <string name="title_menu_tv_show">TV Shows</string>
+    <string name="title_menu_favorite">Favorite</string>
+    <string name="title_menu_search">Search</string>
+    <string name="search_hint">Type keyword</string>
+    <string name="appwidget_text">Favorite Movie</string>
+    <string name="add_widget">Add widget</string>
+    <string name="empty_text">No Data</string>
+    <string name="daily_notification_title">Movie Catalog</string>
+    <string name="daily_notification_message">Movie Catalog missing you!</string>
+    <string name="release_reminder">Release Reminder</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="release_message">%s has been release today!</string>
+</resources>

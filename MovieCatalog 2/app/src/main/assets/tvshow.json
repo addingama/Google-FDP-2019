@@ -1,0 +1,40 @@
+{
+  "movies": [
+    {
+      "title": "Arrow",
+      "released": "2012",
+      "rating": 3.0,
+      "overview": "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.",
+      "language": "English",
+      "genre": "Crime, Drama, Mystery, Action & Adventure",
+      "director": "Greg Berlanti",
+      "actors": "Stephen Amell (Oliver Queen), Emily Bett Rickards (Felicity Smoak), David Ramsey (John Diggle), Katie Cassidy (Laurel Lance), Willa Holland (Thea Queen)",
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/mo0FP1GxOFZT4UDde7RFDz5APXF.jpg"
+    },
+    {
+      "title": "The Flash",
+      "released": "2004",
+      "rating": 4.8,
+      "overview": "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
+      "language": "English",
+      "genre": "Drama, Sci-Fi & Fantasy",
+      "director": "Geoff Johns",
+      "actors": "Grant Gustin, Candice Patton, Carlos Valdes, Danielle Panabaker, Tom Cavanagh",
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/lUFK7ElGCk9kVEryDJHICeNdmd1.jpg"
+    },
+    {
+      "title": "Marvel's Agents of S.H.I.E.L.D.",
+      "released": "2013",
+      "rating": 3.9,
+      "overview": "Agent Phil Coulson of S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement and Logistics Division) puts together a team of agents to investigate the new, the strange and the unknown around the globe, protecting the ordinary from the extraordinary.",
+      "language": "English",
+      "genre": "Science Fiction, Fantasy, Action, Drama",
+      "director": "Joss Whedon",
+      "actors": "Chloe Bennet, Clark Gregg, Ming-Na Wen, Iain De Caestecker, Elizabeth Henstridge",
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/lUFK7ElGCk9kVEryDJHICeNdmd1.jpg"
+    }
+  ]
+}

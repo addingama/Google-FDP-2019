@@ -13,7 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String" , "TMDB_API_KEY" , '"f71d911906b0a0157109443316cf77f8"')
+        buildConfigField("String", "TMDB_API_KEY", '"f71d911906b0a0157109443316cf77f8"')
     }
     buildTypes {
         release {
@@ -27,7 +27,8 @@ dependencies {
     def room_version = "2.2.0-alpha01" // 2.1.0 for latest stable version
 
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // For Kotlin use kapt instead of annotationProcessor
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
